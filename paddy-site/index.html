@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paddy</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/d8c55e0bc2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="w-11/12 mx-auto my-3">
+        <nav class="flex justify-between items-center">
+            <div class="flex gap-1 items-center">
+                <img class="w-5 h-5" src="./images/logo.webp" alt="" />
+                <p class="font-bold text-2xl">Paddy</p>
+            </div>
+            <div class="">
+                <ul class="flex items-center gap-4 text-gray-400">
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Contect</li>
+                </ul>
+            </div>
+            <div class="border border-gray-400 py-1 px-2 rounded-full">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </nav>
+
+        <section>
+            <div class="flex justify-center items-center p-3 mt-6">
+                <div class="w-[700px]">
+                    <p class="text-gray-400 font-semibold text-center text-xl">
+                        Bringing Families Together ❤️‍🔥
+                    </p>
+                    <h2 class="text-6xl text-center font-bold mt-4">
+                        Your Path to Adoption Starts Here
+                    </h2>
+                    <p class="mt-4 text-center">
+                        It is a long established fact that a reader will be distracted by
+                        the readable content of a page when looking at its layout. The
+                        point of using Lorem Ipsum is that it has a.
+                    </p>
+                    <div class="flex justify-center items-center mt-5 p-2">
+                        <button class="btn bg-[#0E7A81] text-white font-semibold">
+                            <a href="#main-show">View More</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="./images/pet.webp" alt="" />
+            </div>
+        </section>
+    </header>
+    <main class="w-11/12 mx-auto" id="main-show">
+        <!-- Adapt your best friend -->
+        <section class="w-11/12 mx-auto">
+            <div class="flex justify-center items-center">
+                <div class="w-[700px]">
+                    <h2 class="text-center font-bold text-2xl">
+                        Adopt Your Best Friend
+                    </h2>
+                    <p class="mt-5 text-center">
+                        Adopters typically select a pet from a shelter, rescue
+                        organization, or adoption center. Consider factors such as
+                        temperament, size, and energy level when choosing the right
+                        companion for your lifestyle.
+                    </p>
+                </div>
+            </div>
+
+            <!-- category button -->
+            <div id="category-buttons" class="flex justify-between items-center mt-5 gap-4"></div>
+
+            <!-- Bast deals for you -->
+            <div class="mt-10 flex justify-between items-center">
+                <h2 class="font-bold text-xl">Best Deal For You</h2>
+                <button class="btn bg-[#0E7A81] text-white" id="shortBy">
+                    Short by Price
+                </button>
+            </div>
+        </section>
+
+        <!-- All Pates Cards -->
+        <!-- For Sniping -->
+        <div id="loading-spinner" class="flex justify-center items-center hidden">
+            <button class="btn loading bg-[#0E7A81] text-white"></button>
+        </div>
+        <!-- All post -->
+        <section class="mt-5 grid grid-cols-4 gap-3 items-start">
+            <div id="display-pats" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 col-span-3"></div>
+            <!-- For Side Bar -->
+            <div id="likedData"
+                class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-start  rounded p-2">
+            </div>
+        </section>
+
+        <!-- Tst for Modal -->
+        <div id="single-pet-display"></div>
+
+        <!-- Modal for Pet Details -->
+        <input type="checkbox" id="petDetailsModal" class="modal-toggle" />
+        <div class="modal">
+            <div class="modal-box">
+                <h2 id="modalTitle" class="text-2xl font-semibold mb-4"></h2>
+                <img id="modalImage" class="w-full h-auto mb-4 rounded" src="" alt="Pet Image" />
+                <p id="modalDetails" class="mb-4"></p>
+                <p id="modalPrice" class="text-lg font-semibold mb-4"></p>
+                <div class="modal-action">
+                    <label for="petDetailsModal" class="btn">Close</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Adoption Confirmation -->
+        <input type="checkbox" id="adoptModal" class="modal-toggle" />
+        <div class="modal">
+            <div class="modal-box">
+                <h2 class="text-5xl text-center font-semibold mb-4">Congress!</h2>
+                <p id="adoptCountdown" class="text-xl text-center font-bold">3</p>
+                <div class="modal-action">
+                    <label for="adoptModal" class="btn bg-[#0E7A81] items-center text-white">Close</label>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+        <section class="bg-black mt-10">
+            <div class="w-11/12 mx-auto">
+                <div class="p-8 flex-1 lg:flex justify-between">
+                    <div>
+                        <div class="flex">
+                            <img src="./images/logo.webp" alt="">
+                            <h2 class="ml-1 font-bold text-white text-xl">Paddy</h2>
+                        </div>
+                            <h2 class="text-white text-xl mt-5">Location: av. Washington 165, NY CA 54003</h2>
+                            <p class="text-white text-xl mt-2"> Phone: +31 85 964 47 25</p>
+                            <p class="text-white text-xl mt-2">Email: info@yourdomain.com</p>
+                            <p class="text-white text-xl mt-2">Openings hours: 9.00 AM - 5.00 PM</p>
+                        <div class="flex gap-5 mt-4">
+                            <img class="w-10" src="./images/facebook.webp" alt="">
+                            <img class="w-10" src="./images/twitter.png" alt="">
+                            <img class="w-10 rounded-full" src="./images/youtube.jpg" alt="">
+                            <img class="w-10 rounded-full" src="./images/instagram.avif" alt="">
+                        </div>
+                    </div>
+
+                    <div class="mt-8 lg:mt-0">
+                        <div>
+                            <h2  class="text-xl text-white">Useful Links</h2>
+                        </div>
+                            <ul class="mt-10">
+                                <li class="text-gray-300 mt-2">Home</li>
+                                <li class="text-gray-300 mt-2">About Us</li>
+                                <li class="text-gray-300 mt-2">Animals</li>
+                                <li class="text-gray-300 mt-2">Foundation</li>
+                                <li class="text-gray-300 mt-2">Contect</li>
+                            </ul>
+                    </div>
+                    <div class="mt-8 lg:mt-0">
+                        <div>
+                            <h2 class="text-xl text-white">Drop a Massage</h2>
+                        </div>
+                        <div>
+                            <input class="bg-gray-500 mt-7 rounded p-2 text-gray-300 border-none w-full" type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="mt-2">
+                            <button class="btn w-full bg-[#0E7A81] border-none font-semibold text-white">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    <!-- Scripts -->
+    <script src="./script/index.js"></script>
+</body>
+
+</html>
